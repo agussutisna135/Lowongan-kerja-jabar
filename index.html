@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="monetag" content="33b8abeb4db6e8ea8ce5b130c077d4b0">
     <title id="pageTitle">Info Loker Terbaru Jawa Barat 2026 - Lowongan Kerja Jabar</title>
-    <meta property="og:title" content="Info Loker Terbaru Jawa Barat 2026">
-    <meta property="og:description" content="Update info lowongan kerja pabrik, kantor, retail & BUMN wilayah Jawa Barat setiap hari. Gratis tanpa pungutan biaya!">
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <script src="https://quge5.com" data-zone="313034" async data-cfasync="false"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SCRIPT IKLAN MONETAG MULTITAG (ZONE 313034) -->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="313034" async data-cfasync="false"></script>
 
     <style>
         * {
@@ -34,7 +34,7 @@
             padding-bottom: 30px;
         }
 
-        /* ================= ADMIN PANEL (TERKUNCI PIN) ================= */
+        /* ================= ADMIN PANEL (TERKUNCI PIN & TERSEMBUNYI) ================= */
         #adminPanel {
             display: none;
             background: #eef6ff;
@@ -91,7 +91,7 @@
         }
 
         .form-group textarea {
-            min-height: 68px;
+            min-height: 70px;
             resize: vertical;
         }
 
@@ -117,6 +117,10 @@
             margin-top: 5px;
         }
 
+        .btn-generate:hover {
+            background: #0b5ed7;
+        }
+
         .result-box {
             display: none;
             margin-top: 14px;
@@ -136,7 +140,7 @@
 
         .result-box textarea {
             width: 100%;
-            height: 145px;
+            height: 115px;
             font-size: 12px;
             padding: 8px;
             border: 1px solid #dee2e6;
@@ -187,16 +191,16 @@
             background: #0d6efd;
             color: white;
             font-weight: 800;
-            padding: 7px 9px;
+            padding: 6px 8px;
             border-radius: 8px;
             font-size: 13px;
         }
 
         .logo-text {
             font-weight: 800;
-            font-size: 16px;
+            font-size: 17px;
             color: #0d6efd;
-            line-height: 1.15;
+            line-height: 1.1;
         }
 
         .logo-text span {
@@ -253,69 +257,39 @@
             font-size: 14px;
         }
 
-        /* ================= BERANDA (HOME VIEW) ================= */
+        /* ================= BERANDA (HALAMAN UTAMA) ================= */
         .hero-banner {
             background: linear-gradient(135deg, #0d6efd, #084298);
             color: #fff;
             padding: 20px 15px;
-            margin: 12px 15px;
-            border-radius: 12px;
+            text-align: center;
         }
 
         .hero-banner h1 {
-            font-size: 19px;
+            font-size: 20px;
+            font-weight: 800;
             margin-bottom: 6px;
         }
 
         .hero-banner p {
             font-size: 13px;
-            opacity: 0.92;
+            opacity: 0.9;
             margin-bottom: 14px;
         }
 
-        .hero-btns {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .hero-wa-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #25d366;
-            color: #fff;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 9px 13px;
-            border-radius: 6px;
-        }
-
-        .hero-tg-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #0088cc;
-            color: #fff;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 9px 13px;
-            border-radius: 6px;
-        }
-
-        .filter-cities {
+        .city-filters {
             display: flex;
             gap: 6px;
             overflow-x: auto;
-            padding: 4px 15px 12px;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eaeaea;
         }
 
         .city-chip {
-            background: #e9ecef;
+            background: #fff;
+            border: 1px solid #dee2e6;
             color: #333;
-            border: none;
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 12px;
@@ -327,12 +301,17 @@
         .city-chip.active {
             background: #0d6efd;
             color: #fff;
+            border-color: #0d6efd;
+        }
+
+        .job-list-section {
+            padding: 15px;
         }
 
         .section-heading {
-            padding: 6px 15px 10px;
             font-size: 15px;
             font-weight: 800;
+            margin-bottom: 12px;
             color: #111;
             display: flex;
             justify-content: space-between;
@@ -340,13 +319,13 @@
         }
 
         .job-card {
-            margin: 0 15px 12px;
             border: 1px solid #e2e8f0;
             border-radius: 10px;
             padding: 14px;
+            margin-bottom: 12px;
             background: #fff;
-            cursor: pointer;
             transition: transform 0.15s, box-shadow 0.15s;
+            cursor: pointer;
         }
 
         .job-card:hover {
@@ -356,35 +335,779 @@
         .job-card-top {
             display: flex;
             justify-content: space-between;
-            font-size: 11px;
-            color: #6c757d;
+            align-items: flex-start;
+            gap: 8px;
             margin-bottom: 6px;
         }
 
-        .job-card-badge {
-            background: #e7f1ff;
-            color: #0d6efd;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-
-        .job-card h3 {
+        .job-card-title {
             font-size: 15px;
             font-weight: 700;
-            color: #111;
-            margin-bottom: 5px;
+            color: #0d6efd;
+            line-height: 1.3;
         }
 
-        .job-card p {
-            font-size: 13px;
-            color: #555;
+        .badge-new {
+            background: #d1e7dd;
+            color: #0f5132;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 7px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .job-card-meta {
+            font-size: 12px;
+            color: #6c757d;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-bottom: 8px;
         }
 
-        .job-card-footer {
+        .job-card-pos {
+            font-size: 12px;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 5px 9px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        /* ================= DETAIL ARTIKEL LOKER ================= */
+        #detailView {
+            display: none;
+        }
+
+        .back-home-bar {
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .btn-back-home {
+            background: none;
+            border: none;
+            color: #0d6efd;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-content {
+            padding: 15px;
+        }
+
+        .meta-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
             font-size: 12px;
-            color: #0d6efd;
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .meta-info i.fa-location-dot {
+            color: #dc3545;
+        }
+
+        .bookmark-btn {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        h1.job-title {
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 14px;
+            color: #111;
+        }
+
+        .social-share {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .social-share button {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .bg-fb { background: #1877f2; }
+        .bg-x { background: #000000; }
+        .bg-tg { background: #26a5e4; }
+        .bg-wa { background: #25d366; }
+        .bg-link { background: #6c757d; }
+
+        .job-details {
+            font-size: 15px;
+            color: #333;
+        }
+
+        .job-details p {
+            margin-bottom: 12px;
+            white-space: pre-line;
+        }
+
+        .job-details h3 {
+            margin: 16px 0 8px;
+            font-size: 16px;
+            color: #111;
+            border-left: 4px solid #0d6efd;
+            padding-left: 8px;
+        }
+
+        .job-details ul {
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+
+        .job-details li {
+            margin-bottom: 5px;
+        }
+
+        .apply-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .apply-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #198754;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 15px 10px;
+            font-size: 12px;
+            color: #6c757d;
+            border-top: 1px solid #eaeaea;
+            margin-top: 20px;
+        }
+
+        /* Toast Notifikasi */
+        #toast {
+            visibility: hidden;
+            min-width: 240px;
+            background-color: #212529;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px 16px;
+            position: fixed;
+            z-index: 9999;
+            left: 50%;
+            bottom: 25px;
+            transform: translateX(-50%);
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- ================= PANEL ADMIN RAHASIA (HANYA UNTUK PEMILIK) ================= -->
+    <div id="adminPanel">
+        <div class="admin-header">
+            <h2><i class="fa-solid fa-pen-to-square"></i> Buat Link Loker PT Baru</h2>
+            <button class="btn-close-admin" onclick="closeAdmin()">Tutup</button>
+        </div>
+
+        <div class="form-group">
+            <label>Judul Lowongan & Nama PT:</label>
+            <input type="text" id="inTitle" placeholder="Contoh: Lowongan Kerja PT Kino Indonesia Tbk Sukabumi 2026">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Lokasi / Kota:</label>
+                <input type="text" id="inCity" placeholder="Contoh: Sukabumi">
+            </div>
+            <div class="form-group">
+                <label>Tanggal Tayang:</label>
+                <input type="text" id="inDate" placeholder="20/11/2026">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Profil Singkat Perusahaan:</label>
+            <textarea id="inDesc" placeholder="Tuliskan profil singkat perusahaan..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Posisi yang Dibutuhkan (1 baris 1 posisi):</label>
+            <textarea id="inPos" placeholder="Operator Produksi&#10;Staff Administrasi&#10;Quality Control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Kualifikasi / Persyaratan (1 baris 1 poin):</label>
+            <textarea id="inQual" placeholder="Pria / Wanita usia 18 - 25 tahun&#10;Pendidikan minimal SMA/SMK sederajat&#10;Sehat jasmani dan rohani"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Cara Melamar (Email / Alamat / Link):</label>
+            <textarea id="inApply" placeholder="Kirimkan CV terbaru Anda ke email: hrd@perusahaan.co.id dengan subjek posisi yang dilamar."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Tautan Tombol Lamar (Opsional - default ke Saluran WA):</label>
+            <input type="text" id="inLink" placeholder="https://...">
+        </div>
+
+        <button class="btn-generate" onclick="generateJobLink()">
+            <i class="fa-solid fa-link"></i> Buat Link Loker & Terapkan
+        </button>
+
+        <div class="result-box" id="resultBox">
+            <label><i class="fa-solid fa-circle-check"></i> Siap Disebar ke Saluran WhatsApp:</label>
+            <textarea id="waShareText" readonly></textarea>
+            <button class="btn-copy-wa" onclick="copyWaText()">
+                <i class="fa-brands fa-whatsapp"></i> Salin Teks & Link untuk Saluran WA
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= HEADER UTAMA ================= -->
+    <header>
+        <div class="logo" onclick="handleLogoTap()">
+            <div class="logo-badge">LOKER</div>
+            <div class="logo-text">Info Loker Jabar<span>Terbaru & Terpercaya</span></div>
+        </div>
+        <div class="nav-actions">
+            <button class="icon-btn" title="Cari Loker" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" class="btn-grup">
+                <i class="fa-brands fa-whatsapp"></i> SALURAN WA
+            </a>
+        </div>
+    </header>
+
+    <!-- BAR PENCARIAN -->
+    <div id="searchBar">
+        <input type="text" id="searchInput" onkeyup="filterJobs()" placeholder="Ketik nama PT, posisi, atau kota (misal: Sukabumi)...">
+    </div>
+
+    <!-- ================= TAMPILAN BERANDA (HALAMAN UTAMA) ================= -->
+    <div id="homeView">
+        <div class="hero-banner">
+            <h1>Info Lowongan Kerja Jawa Barat</h1>
+            <p>Update loker pabrik, kantor, retail & BUMN setiap hari. Gratis tanpa pungutan biaya!</p>
+            <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" class="btn-grup" style="display:inline-flex; padding:9px 16px; font-size:12px;">
+                <i class="fa-brands fa-whatsapp"></i> Ikuti Saluran WhatsApp Resmi
+            </a>
+        </div>
+
+        <div class="city-filters">
+            <button class="city-chip active" onclick="filterByCity('Semua', this)">Semua Wilayah</button>
+            <button class="city-chip" onclick="filterByCity('Sukabumi', this)">Sukabumi</button>
+            <button class="city-chip" onclick="filterByCity('Bogor', this)">Bogor</button>
+            <button class="city-chip" onclick="filterByCity('Cikarang', this)">Cikarang</button>
+            <button class="city-chip" onclick="filterByCity('Karawang', this)">Karawang</button>
+            <button class="city-chip" onclick="filterByCity('Bandung', this)">Bandung Raya</button>
+        </div>
+
+        <div class="job-list-section">
+            <div class="section-heading">
+                <span><i class="fa-solid fa-briefcase" style="color:#0d6efd;"></i> Lowongan Terbaru Hari Ini</span>
+                <span style="font-size:11px; color:#6c757d; font-weight:500;">Update 2026</span>
+            </div>
+
+            <div id="jobListContainer"></div>
+        </div>
+    </div>
+
+    <!-- ================= TAMPILAN DETAIL ARTIKEL LOWONGAN ================= -->
+    <div id="detailView">
+        <div class="back-home-bar">
+            <button class="btn-back-home" onclick="goHome()">
+                <i class="fa-solid fa-arrow-left"></i> Lihat Semua Lowongan Lainnya
+            </button>
+        </div>
+
+        <main class="article-content">
+            <div class="meta-row">
+                <div class="meta-info">
+                    <span><i class="fa-regular fa-eye"></i> <span id="viewCount">14,2rb</span> Views</span>
+                    <span>•</span>
+                    <span><i class="fa-solid fa-location-dot"></i> <span id="jobCity">Sukabumi</span></span>
+                    <span>•</span>
+                    <span><i class="fa-regular fa-clock"></i> <span id="jobDate">20/11/2026</span></span>
+                </div>
+                <button class="bookmark-btn" id="bookmarkBtn" onclick="toggleBookmark()" title="Simpan Lowongan">
+                    <i class="fa-regular fa-bookmark"></i>
+                </button>
+            </div>
+
+            <h1 class="job-title" id="jobTitle">Lowongan Kerja PT Porto Food Indonesia Sukabumi 2026</h1>
+
+            <div class="social-share">
+                <button class="bg-wa" onclick="shareTo('wa')" title="Bagikan ke WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+                <button class="bg-fb" onclick="shareTo('fb')" title="Bagikan ke Facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                <button class="bg-tg" onclick="shareTo('tg')" title="Bagikan ke Telegram"><i class="fa-brands fa-telegram"></i></button>
+                <button class="bg-x" onclick="shareTo('x')" title="Bagikan ke X"><i class="fa-brands fa-x-twitter"></i></button>
+                <button class="bg-link" onclick="copyCurrentUrl()" title="Salin Tautan"><i class="fa-solid fa-link"></i></button>
+            </div>
+
+            <div class="job-details">
+                <p id="jobDesc"></p>
+
+                <h3>Posisi yang Dibutuhkan:</h3>
+                <ul id="jobPosList"></ul>
+
+                <h3>Kualifikasi Umum:</h3>
+                <ul id="jobQualList"></ul>
+
+                <h3>Cara Melamar:</h3>
+                <p id="jobApplyText"></p>
+            </div>
+
+            <div class="apply-box">
+                <p style="font-size:13px; color:#14532d; font-weight:600;">Dapatkan info loker terbaru setiap hari langsung di HP Anda:</p>
+                <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" id="applyBtnLink" target="_blank" class="apply-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Gabung Saluran Info Loker Jabar
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p><strong>Info Loker Terbaru Jawa Barat</strong></p>
+        <p style="margin-top:4px;">Waspada penipuan! Proses rekrutmen resmi tidak pernah memungut biaya apa pun.</p>
+    </footer>
+</div>
+
+<div id="toast">Tersalin!</div>
+
+<script>
+    const ADMIN_PIN = "jabar2026";
+    const WA_CHANNEL_URL = "https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d";
+
+    // Data Lowongan Bawaan di Beranda
+    const defaultJobs = [
+        {
+            id: 0,
+            title: "Lowongan Kerja PT Porto Food Indonesia Sukabumi 2026",
+            city: "Sukabumi",
+            date: "20/11/2026",
+            views: "33,0rb",
+            desc: "PT Porto Food Indonesia adalah perusahaan manufaktur yang bergerak di bidang industri makanan dan minuman yang sedang berkembang pesat di wilayah Sukabumi, Jawa Barat.",
+            pos: ["Staff Purchasing", "Operator Produksi", "Staff Quality Control (QC)"],
+            qual: [
+                "Pendidikan minimal SMA/SMK sederajat (Operator) & D3/S1 (Staff)",
+                "Memiliki pengalaman di bidang terkait menjadi nilai tambah",
+                "Jujur, disiplin, dan mampu bekerja dalam tim",
+                "Bersedia ditempatkan di area pabrik Sukabumi"
+            ],
+            apply: "Kirimkan CV dan berkas lamaran lengkap Anda melalui email resmi rekrutmen perusahaan atau ikuti saluran WhatsApp kami untuk tautan formulir pendaftaran terbaru.",
+            link: WA_CHANNEL_URL
+        },
+        {
+            id: 1,
+            title: "Lowongan Kerja PT Kino Indonesia Tbk Cikembar Sukabumi 2026",
+            city: "Sukabumi",
+            date: "20/11/2026",
+            views: "28,4rb",
+            desc: "PT Kino Indonesia Tbk merupakan salah satu perusahaan barang konsumsi (FMCG) terkemuka di Indonesia yang memproduksi berbagai produk perawatan tubuh, makanan, dan minuman.",
+            pos: ["Operator Packing", "Helper Gudang / Warehouse", "Teknisi Mesin Produksi"],
+            qual: [
+                "Pria / Wanita usia maksimal 28 tahun",
+                "Pendidikan minimal SMA/SMK semua jurusan",
+                "Bersedia bekerja dengan sistem shift",
+                "Sudah vaksin lengkap dan sehat jasmani rohani"
+            ],
+            apply: "Siapkan surat lamaran kerja, CV terbaru, fotokopi KTP, KK, Ijazah terakhir, dan SKCK aktif. Pendaftaran dilakukan secara online melalui portal karir resmi PT Kino Indonesia Tbk.",
+            link: WA_CHANNEL_URL
+        },
+        {
+            id: 2,
+            title: "Lowongan Kerja PT Astra Honda Motor (AHM) Kawasan Industri MM2100 Cikarang",
+            city: "Cikarang",
+            date: "19/11/2026",
+            views: "41,9rb",
+            desc: "PT Astra Honda Motor (AHM) adalah pelopor industri sepeda motor di Indonesia yang terus membuka kesempatan berkarir bagi lulusan baru (fresh graduate) SMA/SMK sederajat.",
+            pos: ["Operator Produksi (Assembly & Welding)", "Staff Logistik"],
+            qual: [
+                "Pria / Wanita usia 18 - 22 tahun",
+                "Pendidikan SMK Teknik Mesin, Otomotif, Listrik, atau SMA IPA",
+                "Tinggi badan minimal 163 cm (Pria) dan 155 cm (Wanita)",
+                "Tidak berkacamata dan tidak buta warna"
+            ],
+            apply: "Pelamar wajib mengisi formulir aplikasi melalui situs resmi rekrutmen PT Astra Honda Motor. Hati-hati terhadap oknum yang mengatasnamakan AHM.",
+            link: WA_CHANNEL_URL
+        },
+        {
+            id: 3,
+            title: "Lowongan Kerja PT Mayora Indah Tbk Cibitung & Bogor 2026",
+            city: "Bogor",
+            date: "19/11/2026",
+            views: "19,7rb",
+            desc: "PT Mayora Indah Tbk membuka lowongan kerja terbaru untuk penempatan pabrik wilayah Bogor dan sekitarnya bagi kandidat yang pekerja keras dan berintegritas.",
+            pos: ["Operator Produksi", "Admin Gudang"],
+            qual: [
+                "Usia maksimal 26 tahun",
+                "Pendidikan minimal SMA/SMK sederajat",
+                "Teliti, cekatan, dan siap bekerja target",
+                "Bersedia ditempatkan di area Bogor"
+            ],
+            apply: "Kirimkan lamaran lengkap dalam format 1 file PDF melalui email rekrutmen resmi atau ikuti update link pendaftaran di saluran WhatsApp Info Loker Jabar.",
+            link: WA_CHANNEL_URL
+        },
+        {
+            id: 4,
+            title: "Lowongan Kerja PT Toyota Motor Manufacturing Indonesia (TMMIN) Karawang",
+            city: "Karawang",
+            date: "18/11/2026",
+            views: "37,5rb",
+            desc: "PT Toyota Motor Manufacturing Indonesia (TMMIN) membuka kesempatan bergabung bagi putra-putri terbaik Jawa Barat untuk ditempatkan di pabrik Karawang Plant.",
+            pos: ["Operator Produksi Karawang", "Quality Inspector"],
+            qual: [
+                "Lulusan SMA/SMK sederajat dengan nilai rata-rata baik",
+                "Usia 18 - 23 tahun",
+                "Sehat jasmani dan rohani",
+                "Siap mengikuti seluruh tahapan seleksi di Karawang"
+            ],
+            apply: "Pendaftaran hanya dilakukan secara online melalui website karir resmi TMMIN tanpa dipungut biaya sepeser pun.",
+            link: WA_CHANNEL_URL
+        },
+        {
+            id: 5,
+            title: "Lowongan Kerja PT Ultra Jaya Milk Industry Tbk Padalarang Bandung",
+            city: "Bandung",
+            date: "18/11/2026",
+            views: "22,1rb",
+            desc: "PT Ultra Jaya Milk Industry & Trading Company Tbk membuka lowongan kerja untuk penempatan kantor pusat dan pabrik di Padalarang, Kabupaten Bandung Barat.",
+            pos: ["Operator Proses & Filling", "Staff Administrasi Produksi"],
+            qual: [
+                "Pendidikan minimal SMK/D3 Teknologi Pangan, Kimia Industri, atau Teknik",
+                "Usia maksimal 27 tahun",
+                "Bersedia bekerja sistem 3 shift",
+                "Domisili Bandung Barat, Cimahi, dan sekitarnya diutamakan"
+            ],
+            apply: "Kirimkan lamaran dan CV terbaru ke bagian HRD PT Ultra Jaya Milk Industry Tbk Jl. Raya Cimareme No. 131 Padalarang atau via portal karir resmi.",
+            link: WA_CHANNEL_URL
+        }
+    ];
+
+    let activeCity = "Semua";
+    let tapCount = 0;
+    let tapTimer = null;
+
+    // Ketuk logo 5x untuk membuka Mode Admin
+    function handleLogoTap() {
+        tapCount++;
+        clearTimeout(tapTimer);
+        tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
+
+        if (tapCount >= 5) {
+            tapCount = 0;
+            const inputPin = prompt("Masukkan PIN Admin:");
+            if (inputPin === ADMIN_PIN) {
+                openAdmin();
+            } else if (inputPin !== null) {
+                showToast("PIN salah!");
+            }
+        } else if (tapCount === 1) {
+            goHome();
+        }
+    }
+
+    function openAdmin() {
+        document.getElementById('adminPanel').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const today = new Date();
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const yyyy = today.getFullYear();
+        if (!document.getElementById('inDate').value) {
+            document.getElementById('inDate').value = `${dd}/${mm}/${yyyy}`;
+        }
+    }
+
+    function closeAdmin() {
+        document.getElementById('adminPanel').style.display = 'none';
+    }
+
+    // Encode & Decode Data Loker ke URL
+    function encodeData(obj) {
+        const json = JSON.stringify(obj);
+        return btoa(unescape(encodeURIComponent(json)));
+    }
+
+    function decodeData(str) {
+        try {
+            const json = decodeURIComponent(escape(atob(str)));
+            return JSON.parse(json);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function renderJobList(jobs) {
+        const container = document.getElementById('jobListContainer');
+        container.innerHTML = '';
+
+        if (jobs.length === 0) {
+            container.innerHTML = '<p style="text-align:center; color:#6c757d; padding:20px; font-size:13px;">Lowongan tidak ditemukan untuk kata kunci/wilayah tersebut.</p>';
+            return;
+        }
+
+        jobs.forEach(job => {
+            const card = document.createElement('div');
+            card.className = 'job-card';
+            card.onclick = () => openJobDetail(job);
+            card.innerHTML = `
+                <div class="job-card-top">
+                    <div class="job-card-title">${job.title}</div>
+                    <span class="badge-new">TERBARU</span>
+                </div>
+                <div class="job-card-meta">
+                    <span><i class="fa-solid fa-location-dot" style="color:#dc3545;"></i> ${job.city}</span>
+                    <span><i class="fa-regular fa-clock"></i> ${job.date}</span>
+                    <span><i class="fa-regular fa-eye"></i> ${job.views}</span>
+                </div>
+                <div class="job-card-pos">Posisi: ${job.pos.join(', ')}</div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    function filterByCity(city, btnEl) {
+        activeCity = city;
+        document.querySelectorAll('.city-chip').forEach(c => c.classList.remove('active'));
+        if (btnEl) btnEl.classList.add('active');
+        filterJobs();
+    }
+
+    function filterJobs() {
+        const q = document.getElementById('searchInput').value.toLowerCase();
+        const filtered = defaultJobs.filter(job => {
+            const matchCity = activeCity === 'Semua' || job.city.toLowerCase().includes(activeCity.toLowerCase());
+            const matchQuery = job.title.toLowerCase().includes(q) ||
+                               job.city.toLowerCase().includes(q) ||
+                               job.pos.join(' ').toLowerCase().includes(q);
+            return matchCity && matchQuery;
+        });
+        renderJobList(filtered);
+    }
+
+    function toggleSearch() {
+        const sb = document.getElementById('searchBar');
+        sb.style.display = sb.style.display === 'block' ? 'none' : 'block';
+        if (sb.style.display === 'block') {
+            document.getElementById('homeView').style.display = 'block';
+            document.getElementById('detailView').style.display = 'none';
+            document.getElementById('searchInput').focus();
+        }
+    }
+
+    function openJobDetail(job) {
+        document.getElementById('homeView').style.display = 'none';
+        document.getElementById('detailView').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        document.getElementById('pageTitle').textContent = job.title + " - Info Loker Jabar";
+        document.getElementById('jobTitle').textContent = job.title;
+        document.getElementById('jobCity').textContent = job.city;
+        document.getElementById('jobDate').textContent = job.date;
+        document.getElementById('viewCount').textContent = job.views || "12,5rb";
+        document.getElementById('jobDesc').textContent = job.desc;
+        document.getElementById('jobApplyText').textContent = job.apply;
+
+        const applyBtn = document.getElementById('applyBtnLink');
+        if (job.link && job.link.trim() !== "") {
+            applyBtn.href = job.link.trim();
+            applyBtn.innerHTML = job.link === WA_CHANNEL_URL
+                ? '<i class="fa-brands fa-whatsapp"></i> Gabung Saluran Info Loker Jabar'
+                : '<i class="fa-solid fa-paper-plane"></i> Lamar / Cek Info Resmi Sekarang';
+        } else {
+            applyBtn.href = WA_CHANNEL_URL;
+        }
+
+        const posList = document.getElementById('jobPosList');
+        posList.innerHTML = '';
+        (job.pos || []).forEach(p => {
+            if (p.trim()) {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${p.trim()}</strong>`;
+                posList.appendChild(li);
+            }
+        });
+
+        const qualList = document.getElementById('jobQualList');
+        qualList.innerHTML = '';
+        (job.qual || []).forEach(q => {
+            if (q.trim()) {
+                const li = document.createElement('li');
+                li.textContent = q.trim();
+                qualList.appendChild(li);
+            }
+        });
+    }
+
+    function goHome() {
+        document.getElementById('detailView').style.display = 'none';
+        document.getElementById('homeView').style.display = 'block';
+        document.getElementById('pageTitle').textContent = "Info Loker Terbaru Jawa Barat 2026 - Lowongan Kerja Jabar";
+        const cleanUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+    }
+
+    // Generator Link Loker PT Baru di Mode Admin
+    function generateJobLink() {
+        const title = document.getElementById('inTitle').value.trim();
+        const city = document.getElementById('inCity').value.trim() || "Jawa Barat";
+        const date = document.getElementById('inDate').value.trim() || "20/11/2026";
+        const desc = document.getElementById('inDesc').value.trim();
+        const posRaw = document.getElementById('inPos').value.trim();
+        const qualRaw = document.getElementById('inQual').value.trim();
+        const apply = document.getElementById('inApply').value.trim();
+        const link = document.getElementById('inLink').value.trim() || WA_CHANNEL_URL;
+
+        if (!title) {
+            showToast("Isi Judul Lowongan & Nama PT terlebih dahulu!");
+            return;
+        }
+
+        const jobObj = {
+            title: title,
+            city: city,
+            date: date,
+            views: "1,2rb",
+            desc: desc || `Informasi lowongan kerja terbaru ${title}.`,
+            pos: posRaw ? posRaw.split('\n') : ["Staff / Operator"],
+            qual: qualRaw ? qualRaw.split('\n') : ["Pendidikan minimal SMA/SMK sederajat", "Sehat jasmani dan rohani"],
+            apply: apply || "Silakan ikuti petunjuk pendaftaran melalui tautan di bawah ini.",
+            link: link
+        };
+
+        const encoded = encodeData(jobObj);
+        const baseUrl = window.location.origin + window.location.pathname;
+        const shareUrl = `${baseUrl}?loker=${encoded}`;
+
+        window.history.replaceState({}, document.title, shareUrl);
+        openJobDetail(jobObj);
+
+        const posSummary = jobObj.pos.slice(0, 3).map(p => `• ${p.trim()}`).join('\n');
+        const waMessage = `📢 *INFO LOKER TERBARU (${city.toUpperCase()})*\n\n*${title}*\n\nPosisi dibutuhkan:\n${posSummary}\n\n👉 *Lihat kualifikasi lengkap & cara melamar di sini:*\n${shareUrl}\n\n_Bagikan ke teman yang membutuhkan!_`;
+
+        document.getElementById('waShareText').value = waMessage;
+        document.getElementById('resultBox').style.display = 'block';
+        showToast("Link PT baru berhasil dibuat!");
+    }
+
+    function copyWaText() {
+        const txt = document.getElementById('waShareText');
+        txt.select();
+        txt.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(txt.value).then(() => {
+            showToast("Teks & Link berhasil disalin! Siap ditempel ke Saluran WA.");
+        });
+    }
+
+    function toggleBookmark() {
+        const btn = document.getElementById('bookmarkBtn');
+        const icon = btn.querySelector('i');
+        if (icon.classList.contains('fa-regular')) {
+            icon.classList.remove('fa-regular');
+            icon.classList.add('fa-solid');
+            showToast("Lowongan disimpan!");
+        } else {
+            icon.classList.remove('fa-solid');
+            icon.classList.add('fa-regular');
+            showToast("Simpanan dibatalkan");
+        }
+    }
+
+    function shareTo(platform) {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(document.getElementById('jobTitle').textContent);
+        let shareUrl = '';
+        if (platform === 'wa') shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+        if (platform === 'fb') shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        if (platform === 'tg') shareUrl = `https://t.me/share/url?url=${url}&text=${text}`;
+        if (platform === 'x') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+        window.open(shareUrl, '_blank');
+    }
+
+    function copyCurrentUrl() {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast("Tautan lowongan disalin!");
+        });
+    }
+
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.className = "show";
+        setTimeout(() => { t.className = t.className.replace("show", ""); }, 2600);
+    }
+
+    // Inisialisasi Halaman Saat Dibuka
+    window.onload = function() {
+        renderJobList(defaultJobs);
+
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('masuk') === ADMIN_PIN) {
+            openAdmin();
+            const cleanUrl = window.location.origin + window.location.pathname;
+            window.history.replaceState({}, document.title, cleanUrl);
+        }
+
+        const lokerParam = params.get('loker');
+        if (lokerParam) {
+            const jobData = decodeData(lokerParam);
+            if (jobData) {
+                openJobDetail(jobData);
+            }
+        }
+    };
+</script>
+
+</body>
+</html>
